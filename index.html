@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            width: 100%;
+            height: 100vh;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .box-main{
+            background-color: white;
+            width: calc(500px - 60px * 2);
+            height: calc(200px - 60px * 2);
+            border: solid white 10px ;
+            border-bottom: solid red 60px;
+        }
+        .box-pillar{
+            background-color: white;
+            width: 300px;
+            height: 200px;
+            position:relative;
+        }
+        .box-pillar::after{
+            content: " ";
+            width: 50px;
+            height: 300px;
+            background-color: yellow;
+            position:absolute;
+            border-left: solid 20px white;
+            border-right: solid 20px white;
+            border-top: solid 20px red;
+            border-bottom: solid 20px red;
+            left:0;
+        }
+        .box-pillar::before{
+            content: " ";
+            width: 50px;
+            height: 300px;
+            background-color: yellow;
+            position:absolute;
+            border-left: solid 20px white;
+            border-right: solid 20px white;
+            border-top: solid 20px red;
+            border-bottom: solid 20px red;
+            right:0;
+        }
+        .box-bottom{
+            background-color: white;
+            width: calc(600px - 60px * 2);
+            height: calc(320px - 60px * 2);
+            border: solid white 30px ;
+            border-bottom: solid burlywood 60px;            
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 1 屋頂  -->
+    <div class="box box-main"></div>
+    <!-- 1 柱子 -->
+    <div class="box box-pillar"></div>
+    <!-- 與 樓梯 -->
+    <div class="box box-bottom"></div>
+    
+    
+</body>
+</html>
+
+<body>
+    
